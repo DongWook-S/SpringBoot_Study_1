@@ -1,7 +1,11 @@
 package hello.hellospring.domain;
 
-public class Member {
+import javax.persistence.*;
 
+@Entity
+public class Member {
+    // KEY 값임을 MAPPING
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
